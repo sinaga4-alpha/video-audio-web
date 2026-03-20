@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Video chat</title>
+    <style>
+        video {
+            width: 30px;
+            margin: 10px;
+            border: 2px solid black;
+            }
+    </style>
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+<body>
+
+<h2>Video Chat (Room)</h2>
+
+<input id='roomInput' placeholder='Enter room name'>
+<button onclick='joinRoom()'>Join Room</button>
+<button onclick='startCall()'>Start Call</button>
+
+<br><br>
+
+<video id='localVideo' autoplay muted></video>
+<video id='remoteVideo' autoplay></video>
+
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
